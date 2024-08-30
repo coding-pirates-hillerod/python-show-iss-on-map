@@ -9,7 +9,7 @@ response = requests.get("http://api.open-notify.org/iss-now.json").text
 data = json.loads(response)
 
 # Convert latitude and longitude to float from data
-longitude, latitude = data["iss_position"].values()
+latitude, longitude = data["iss_position"].values()
 
 latitude = float(latitude)
 longitude = float(longitude)
